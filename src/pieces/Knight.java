@@ -2,6 +2,8 @@ package pieces;
 
 import main.Board;
 
+import java.awt.image.BufferedImage;
+
 public class Knight extends Piece {
     public Knight(Board board, int col, int row, boolean isWhite) {
         super(board);
@@ -11,5 +13,10 @@ public class Knight extends Piece {
         this.yPos = row * board.tileSize;
 
         this.isWhite = isWhite;
+        this.name = "Knight";
+
+        this.sprite = sheet.getSubimage(3 * sheetScale, isWhite ? 0 : sheetScale, sheetScale, sheetScale);
+        (sheetScale, sheetScale, BufferedImage.SCALE_SMOOTH);
     }
-}
+    }
+
