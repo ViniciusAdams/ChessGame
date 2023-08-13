@@ -29,13 +29,12 @@ public class Piece {
     Board board;
 
     public Piece (Board board){
-
-
-
-
         this.board = board;
 
 
+    }
+    public void paint (Graphics2D gd2){
+        gd2.drawImage(sprite,xPos,yPos,null);
     }
     }
 
