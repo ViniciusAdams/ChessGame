@@ -15,8 +15,10 @@ public class Knight extends Piece {
         this.isWhite = isWhite;
         this.name = "Knight";
 
-        this.sprite = sheet.getSubimage(3 * sheetScale, isWhite ? 0 : sheetScale, sheetScale, sheetScale);
-        (sheetScale, sheetScale, BufferedImage.SCALE_SMOOTH);
+        this.sprite = sheet.getSubimage(3 * sheetScale, isWhite ? 0 : sheetScale, sheetScale, sheetScale) .getScaledInstance(sheetScale, sheetScale, BufferedImage.SCALE_SMOOTH);
+
     }
+
+
     }
 
