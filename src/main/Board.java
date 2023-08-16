@@ -1,4 +1,5 @@
 package main;
+import pieces.Bishop;
 import pieces.Knight;
 import pieces.Piece;
 
@@ -19,7 +20,17 @@ public class Board extends JPanel {
 //setting background to green and applying the dimensions
     }
     public void addPieces (){
+
         pieceList.add (new Knight(this,1,0,false));
+        pieceList.add (new Knight(this,1,0,false));
+        pieceList.add (new Bishop(this,2,0,false));
+        pieceList.add (new Queen(this,1,0,false));
+        pieceList.add (new Knight(this,1,0,false));
+
+
+
+
+
     }
     public void paintComponent(Graphics g) {
 
