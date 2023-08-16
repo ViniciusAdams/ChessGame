@@ -14,16 +14,20 @@ public class Piece {
     public String name;
     public int value;
 
+
+
+
     BufferedImage sheet;
 
-
     {
-        try{
-            sheet = ImageIO.read(ClassLoader.getSystemResourceAsStream("piece.png"));
-        }catch (IOException e){
+        try {
+            // Load the image from the "red" folder inside the "res" folder
+            sheet = ImageIO.read(ClassLoader.getSystemResourceAsStream("res/pieces.png"));
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
     protected int sheetScale = sheet.getWidth()/6;
     Image sprite;
     Board board;
