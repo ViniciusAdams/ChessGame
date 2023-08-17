@@ -56,7 +56,7 @@ public class Board extends JPanel {
         pieceList.add (new Pawn(this,6,6,true));
         pieceList.add (new Pawn(this,7,6,true));
 
-
+//testing commit
 
 
 
