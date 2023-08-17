@@ -1,7 +1,5 @@
 package main;
-import pieces.Bishop;
-import pieces.Knight;
-import pieces.Piece;
+import pieces.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -21,11 +19,26 @@ public class Board extends JPanel {
     }
     public void addPieces (){
 
-        pieceList.add (new Knight(this,1,0,false));
+        pieceList.add (new Rook(this,0,0,false));
         pieceList.add (new Knight(this,1,0,false));
         pieceList.add (new Bishop(this,2,0,false));
-        pieceList.add (new Queen(this,1,0,false));
-        pieceList.add (new Knight(this,1,0,false));
+        pieceList.add (new Queen(this,3,0,false));
+        pieceList.add (new King(this,4,0,false));
+        pieceList.add (new Bishop(this,5,0,false));
+        pieceList.add (new Knight(this,6,0,false));
+        pieceList.add (new Rook(this,7,0,false));
+//////////
+        pieceList.add (new Pawn(this,0,1,false));
+        pieceList.add (new Pawn(this,1,1,false));
+        pieceList.add (new Pawn(this,2,1,false));
+        pieceList.add (new Pawn(this,3,1,false));
+        pieceList.add (new Pawn(this,4,1,false));
+        pieceList.add (new Pawn(this,5,1,false));
+        pieceList.add (new Pawn(this,6,1,false));
+        pieceList.add (new Pawn(this,7,1,false));
+
+
+
 
 
 
