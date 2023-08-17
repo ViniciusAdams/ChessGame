@@ -15,7 +15,7 @@ public class Pawn extends Piece {
         this.isWhite = isWhite;
         this.name = "Knight";
 
-        this.sprite = sheet.getSubimage(6 * sheetScale, isWhite ? 0 : sheetScale, sheetScale, sheetScale) .getScaledInstance(sheetScale, sheetScale, BufferedImage.SCALE_SMOOTH);
+        this.sprite = sheet.getSubimage(5 * sheetScale, isWhite ? 0 : sheetScale, sheetScale, sheetScale) .getScaledInstance(sheetScale, sheetScale, BufferedImage.SCALE_SMOOTH);
 
     }
 
