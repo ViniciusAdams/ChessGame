@@ -14,6 +14,9 @@ public Input (Board board){
 
     @Override
     public void mousePressed(MouseEvent e) {
+    int col = e.getX() / board.tileSize;
+    int row = e.getX() / board.tileSize;
+
 
     }
 
