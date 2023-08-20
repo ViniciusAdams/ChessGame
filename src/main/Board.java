@@ -17,6 +17,14 @@ public class Board extends JPanel {
         addPieces();
 //setting background to green and applying the dimensions
     }
+    public Piece getPiece (int col, int row){
+    for (Piece piece : pieceList){
+        if (piece.col == col && piece.row == row){
+            return piece;
+        }
+    }
+        return null;
+    }
     public void addPieces (){
         //implementing all the black pieces
         pieceList.add (new Rook(this,0,0,false));
