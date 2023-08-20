@@ -6,7 +6,11 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 public class Input extends MouseAdapter {
+Board board;
 
+public Input (Board board){
+    this.board = board;
+}
 
     @Override
     public void mousePressed(MouseEvent e) {
