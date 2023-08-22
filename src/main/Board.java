@@ -10,8 +10,11 @@ public class Board extends JPanel {
     public int tileSize = 85;
     int cols = 8;
     int rows = 8;
+
 //defining cols and rows as 8x8 as a chess game
     ArrayList <Piece> pieceList = new ArrayList<>();
+
+    public Piece selectedPiece;
     public Board() {
         this.setPreferredSize(new Dimension(cols * tileSize, rows * tileSize)); // Corrected the method call
         addPieces();
@@ -24,6 +27,16 @@ public class Board extends JPanel {
         }
     }
         return null;
+    }
+
+
+    public void makeMove (Move move){
+        move.piece.col = move.newCol;
+    }
+
+    public boolean isValidMove(Move move){
+
+        return true;
     }
     public void addPieces (){
         //implementing all the black pieces
