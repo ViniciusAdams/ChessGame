@@ -14,9 +14,12 @@ public Input (Board board){
     this.board = board;
 }
 
+
+
     @Override
     public void mousePressed(MouseEvent e) {
-        int col = e.getX() / board.tileSize;
+    //finished
+    int col = e.getX() / board.tileSize;
         int row = e.getX() / board.tileSize;
 
         Piece pieceXY = board.getPiece(col, row);
@@ -24,25 +27,25 @@ public Input (Board board){
             board.selectedPiece = pieceXY;
         }
     }
+    @Override
+    public void mouseDragged(MouseEvent e) {
+        if (board.selectedPiece != null){
+            board.selectedPiece.xPos = e.getX() - board.tileSize /2;
+            board.selectedPiece.yPos = e.getY() - board.tileSize /2;
+
+            board.repaint();
+        }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-    if (board.selectedPiece != null){
-        board.selectedPiece.xPos = e.getX() - board.tileSize /2;
-        board.selectedPiece.xPos = e.getY() - board.tileSize /2;
-
-        board.repaint();
-    }
-
-
 
     }
 
 
-    @Override
-    public void mouseDragged(MouseEvent e) {
-    int col = e.getX() / board.tileSize;
-    int row = e.getY() / board.tileSize;
+
     }
+
+
+
 
 }
