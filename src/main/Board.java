@@ -28,6 +28,16 @@ public class Board extends JPanel {
     }
         return null;
     }
+
+
+    public void makeMove (Move move){
+        move.piece.col = move.newCol;
+    }
+
+    public boolean isValidMove(Move move){
+
+        return true;
+    }
     public void addPieces (){
         //implementing all the black pieces
         pieceList.add (new Rook(this,0,0,false));
