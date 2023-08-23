@@ -11,41 +11,49 @@ public class Board extends JPanel {
     int cols = 8;
     int rows = 8;
 
-//defining cols and rows as 8x8 as a chess game
-    ArrayList <Piece> pieceList = new ArrayList<>();
+    //defining cols and rows as 8x8 as a chess game
+    ArrayList<Piece> pieceList = new ArrayList<>();
 
     public Piece selectedPiece;
+    Input input = new Input (this);
     public Board() {
         this.setPreferredSize(new Dimension(cols * tileSize, rows * tileSize)); // Corrected the method call
+        this.addMouseListener(input);
+        this.addMouseMotionListener(input);
         addPieces();
 //setting background to green and applying the dimensions
     }
-    public Piece getPiece (int col, int row){
-    for (Piece piece : pieceList){
-        if (piece.col == col && piece.row == row){
-            return piece;
+
+    public Piece getPiece(int col, int row) {
+        for (Piece piece : pieceList) {
+            if (piece.col == col && piece.row == row) {
+                return piece;
+            }
         }
-    }
         return null;
     }
 
 
-    public void makeMove (Move move){
+    public void makeMove(Move move) {
         move.piece.col = move.newCol;
         move.piece.col = move.newRow;
         move.piece.xPos = move.newCol = tileSize;
         move.piece.yPos = move.newRow = tileSize;
-       capture(move);
-    }
-    public void capture (Move move){
-       pieceList.remove(move.capture);
+        capture(move);
     }
 
-    public boolean isValidMove(Move move){
-
-        return true;
+    public void capture(Move move) {
+        pieceList.remove(move.capture);
     }
-    public boolean sameTeam (Piece p1, Piece p2){
+
+    public boolean isValidMove(Move move) {
+        if (sameTeam(move.piece, move.capture)){ ;
+        return false;
+    }
+    return true;
+}
+
+public boolean sameTeam (Piece p1, Piece p2){
         if (p1==null || p2 == null){
             return false;
         }
