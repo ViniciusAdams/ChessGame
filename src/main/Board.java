@@ -32,6 +32,9 @@ public class Board extends JPanel {
 
     public void makeMove (Move move){
         move.piece.col = move.newCol;
+        move.piece.col = move.newRow;
+        move.piece.xPos = move.newCol = tileSize;
+        move.piece.yPos = move.newRow = tileSize;
     }
 
     public boolean isValidMove(Move move){
