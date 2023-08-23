@@ -29,13 +29,13 @@ public Input (Board board){
     }
     @Override
     public void mouseDragged(MouseEvent e) {
-        if (board.selectedPiece != null){
-            board.selectedPiece.xPos = e.getX() - board.tileSize /2;
-            board.selectedPiece.yPos = e.getY() - board.tileSize /2;
+        if (board.selectedPiece != null) {
+            board.selectedPiece.xPos = e.getX() - board.tileSize / 2;
+            board.selectedPiece.yPos = e.getY() - board.tileSize / 2;
 
             board.repaint();
         }
-
+    }
     @Override
     public void mouseReleased(MouseEvent e) {
     int col = e.getX() / board.tileSize;
@@ -48,7 +48,7 @@ public Input (Board board){
         }else {
             board.selectedPiece.xPos = board.selectedPiece.col * board.tileSize;
             board.selectedPiece.yPos = board.selectedPiece.row * board.tileSize;
-        }
+
 
     }
 
@@ -59,6 +59,7 @@ public Input (Board board){
         board.repaint();
 
     }
+
 
 
 
