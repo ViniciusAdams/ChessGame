@@ -45,6 +45,13 @@ public class Board extends JPanel {
 
         return true;
     }
+    public boolean sameTeam (Piece p1, Piece p2){
+        if (p1==null || p2 == null){
+            return false;
+        }
+        return p1.isWhite == p2.isWhite;
+    }
+
     public void addPieces (){
         //implementing all the black pieces
         pieceList.add (new Rook(this,0,0,false));
